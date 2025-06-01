@@ -1,0 +1,13 @@
+name: Deploy the backend
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build_docker_image:
+    runs-on: ubuntu
+    name: Build the backend docker image
+    steps:
+      - run: docker run hello-world
+
