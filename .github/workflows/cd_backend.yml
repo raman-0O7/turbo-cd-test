@@ -11,3 +11,4 @@ jobs:
     steps:
       - run: docker run hello-world
 
+# do it
