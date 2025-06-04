@@ -1,4 +1,4 @@
-name: Deploy the Websocket
+name: Deploy the frontend
 on:
   push:
     branches: [main]
@@ -20,9 +20,10 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockerfile.ws
+          file: ./docker/Dockerfile.web
+          build-args: DATABASE_URL=${{ secrets.DATABASE_URL }}
           push: true
-          tags: ramanupadhyay1/turbo-test-ws:${{github.sha}}
+          tags: ramanupadhyay1/turbo-test-web:${{github.sha}}
 
       - name: Push to VM
         run: |
