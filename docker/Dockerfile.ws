@@ -16,4 +16,4 @@ RUN bun db:generate
 
 EXPOSE 8081
 
-CMD [ "bun", "index.ts" ]
+CMD [ "bun", "start:ws" ]

@@ -14,4 +14,4 @@ RUN bun db:generate
 
 EXPOSE 3002
 
-CMD [ "bun", "run", "index.ts" ]
+CMD [ "bun", "start:backend" ]
